@@ -1,6 +1,6 @@
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from "aws-lambda";
-import crypto from "crypto";
 import { z } from "zod";
+import { verifySignature } from "./utils/crypo";
 
 const schema = z.object({
   name: z.string(),
@@ -37,11 +37,4 @@ export const handler = async (
     statusCode: 200,
     body: "Hello, World!",
   };
-};
-
-const verifySignature = (signature: string, body: string) => {
-  return (
-    crypto.createHmac("sha256", "abc123").update(body).digest("hex") ===
-    signature
-  );
 };
