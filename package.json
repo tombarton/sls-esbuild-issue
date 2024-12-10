@@ -1,0 +1,18 @@
+{
+  "name": "serverless-esbuild-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Tom Barton <tom.r.barton@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.146",
+    "@types/node": "^22.10.1",
+    "esbuild": "^0.24.0",
+    "serverless": "^4.4.15",
+    "serverless-esbuild": "^1.54.6"
+  },
+  "dependencies": {
+    "aws-lambda": "^1.0.7",
+    "zod": "^3.24.0"
+  }
+}
